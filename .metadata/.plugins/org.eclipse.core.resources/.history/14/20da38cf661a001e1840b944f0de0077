@@ -1,0 +1,13 @@
+package com.project;
+
+public class ConnectionProvider {
+
+	public static Connection getCon()
+	{
+		try(){
+			
+		}catch(Exception e){
+			console.log(e);
+		}
+	}
+}

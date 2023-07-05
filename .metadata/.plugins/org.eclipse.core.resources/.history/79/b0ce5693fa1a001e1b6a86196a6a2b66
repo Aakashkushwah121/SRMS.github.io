@@ -1,0 +1,25 @@
+<%@page import="com.project.ConnectionProvider" %>
+<%@page import="java.sql.*" %>
+<%
+	String cource=request.getParameter("cource");
+	String branch=request.getParameter("branch");
+	String rollNo=request.getParameter("rollNo");
+	String name=request.getParameter("name");
+	String fatherName =request.getParameter("fatherName");
+	String gender=request.getParameter("gender");
+
+	
+	try
+	{
+		Connection con=ConnectionProvider.getCon();
+		//Class.forName("com.mysql.jdbc.Driver");
+		//Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/srms?characterEncoding=latin1","root","rahul");
+		Statement st=con.createStatement();
+		st.executeUpdate("insert into student values('"+cource+"','"+branch+"','"+rollNo+"','"+name+"','"+fatherName+"','"+gender+"',)");
+		response.sendRedirect("adminHome.jsp");
+	}
+	catch(Exception e)
+	{
+		out.println(e);
+	}
+%>

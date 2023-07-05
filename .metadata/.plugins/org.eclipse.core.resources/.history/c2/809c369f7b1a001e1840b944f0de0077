@@ -1,0 +1,20 @@
+<%@page import="com.project.ConnectionProvider" %>
+<%@page import="java.sql.*" %>
+<%
+	String rollNo=request.getParameter("");
+	String s1=request.getParameter("");
+	String s2=request.getParameter("");
+	String s3=request.getParameter("");
+	String s4=request.getParameter("");
+	String s5=request.getParameter("");
+	String s6=request.getParameter("");
+	
+	try{
+		
+	}
+	catch(Exception e)
+	{
+		out.println(e);
+	}
+	
+%>
